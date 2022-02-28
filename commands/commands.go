@@ -107,6 +107,6 @@ func genGames() {
 		return
 	}
 
-	gamegenerator.GeneratedGames = gamegenerator.GetGeneratedGamesFromBuildIn(usedWords, noOfFeatures, noOfGames)
+	gamegenerator.GeneratedGames = gamegenerator.GetGeneratedGames(usedWords, noOfFeatures, noOfGames)
 	gamegenerator.PrintAllGames(gamegenerator.GeneratedGames)
 }

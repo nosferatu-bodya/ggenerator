@@ -44,35 +44,7 @@ func PrintAllGames(games []Game){
 	}
 }
 
-func GetGeneratedGamesFromOwn(words []string, noOfFeatures int) []Game {
-	var returnList []Game 
-	words = shuffleArray(words, 121)
-	group := 0
-	index := 0
-	curFeature := 0
-
-	for index < (len(words)/3 + 1) {
-		var curGame Game
-
-		for curFeature < noOfFeatures {
-			if group < len(words){
-				curGame.features = append(curGame.features, words[group])
-			}
-
-			curFeature += 1
-			group += 1
-		}
-
-		returnList = append(returnList, curGame)
-
-		curFeature = 0
-		index += 1
-	}
-
-	return returnList
-}
-
-func GetGeneratedGamesFromBuildIn(words []string, noOfFeatures, noOfGames int) []Game {
+func GetGeneratedGames(words []string, noOfFeatures, noOfGames int) []Game {
 	var returnList []Game 
 	words = shuffleArray(words, 121)
 	group := 0
