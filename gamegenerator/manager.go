@@ -46,7 +46,7 @@ func PrintAllGames(games []Game){
 
 func GetGeneratedGames(words []string, noOfFeatures, noOfGames int) []Game {
 	var returnList []Game 
-	words = shuffleArray(words, 121)
+	words = shuffleArray(words, 1239)
 	group := 0
 	index := 0
 	curFeature := 0
